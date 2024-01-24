@@ -267,3 +267,21 @@
   font-weight: 900;
   line-height: $BASE_UNIT*3;
 }
+
+@mixin LOGO_TITLE {
+  font-size: $BASE_UNIT*10;
+  font-weight: 900;
+  line-height: $BASE_UNIT*11.5;
+}
+
+@mixin LOGO_TITLE_SMALL {
+  font-size: $BASE_UNIT*8;
+  font-weight: 900;
+  line-height: $BASE_UNIT*9;
+}
+
+@mixin LOGO_TITLE_XSMALL {
+  font-size: $BASE_UNIT*6;
+  font-weight: 900;
+  line-height: $BASE_UNIT*7;
+}

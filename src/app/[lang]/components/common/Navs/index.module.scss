@@ -1,0 +1,8 @@
+@use '../../../../../styles/index' as *;
+
+.wrap {
+  @include flexRow;
+  @include spaceBetween;
+  padding: $BASE_UNIT;
+  width: $BASE_UNIT*100;
+}

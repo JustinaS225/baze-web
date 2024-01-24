@@ -1,0 +1,24 @@
+@use '../../../../../styles/index' as *;
+
+.wrap {
+  display: flex;
+  padding: $BASE_UNIT;
+}
+
+.title {
+  @include LOGO_TITLE;
+  color: $NEUTRAL_BLACK_COLOR;
+  text-transform: uppercase;
+}
+
+@media (max-width: $TABLET_SIZE_THRESHOLD) {
+  .title {
+    @include LOGO_TITLE_SMALL;
+  }
+}
+
+@media (max-width: $MOBILE_SIZE_THRESHOLD) {
+  .title {
+    @include LOGO_TITLE_XSMALL;
+  }
+}
