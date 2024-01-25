@@ -30,7 +30,7 @@ const ProductGrid = ({productsImages, productsInfo, productsSlugs, currentEndpoi
       <div className={styles.innerWrap}>
         {productsInfo.map((product, index) => {
           return (
-                <div className={styles.productWrap}>
+                <div key={index} className={styles.productWrap}>
                   <Link href={`${currentEndpoint}/${productsSlugs[index]}`} className={styles.link}>
                     <div className={styles.productImageWrap}>
                       <Image 
