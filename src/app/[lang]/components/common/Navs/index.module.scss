@@ -4,5 +4,16 @@
   @include flexRow;
   @include spaceBetween;
   padding: $BASE_UNIT;
-  width: $BASE_UNIT*100;
+  width: $BASE_UNIT*45;
+}
+
+.link {
+  @include MEDIUM_HEADING_4;
+  color: $NEUTRAL_BLACK_COLOR;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: $BASE_UNIT;
+  }
 }

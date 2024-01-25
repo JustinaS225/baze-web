@@ -8,7 +8,7 @@ type Props = {
   data: IAssetsCollection;
 }
 
-const Home = ({data}: Props) => {
+const Reviews = ({data}: Props) => {
   const commonData = data.static.common;
   const pageData = data.static.pageData;
 
@@ -28,4 +28,4 @@ const Home = ({data}: Props) => {
    );
 }
  
-export default Home;
+export default Reviews;
