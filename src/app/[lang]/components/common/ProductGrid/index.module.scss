@@ -1,0 +1,97 @@
+@use '../../../../../styles/index' as *;
+
+.wrap {
+  @include flexColumn;
+  @include fullCenter;
+  width: 100%;
+}
+
+.innerWrap {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: $BASE_UNIT*10;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: $BASE_UNIT*10;
+  max-width: $CONTENT_MAX_WIDTH;
+  width: 100%;
+  margin-bottom: $BASE_UNIT*10;
+}
+
+.link {
+  &:hover {
+    .productImageWrap {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.productWrap {
+  @include flexColumn;
+  @include fullCenter;
+  width: 100%;
+}
+
+.productImageWrap {
+  width: $BASE_UNIT*30;
+  height: $BASE_UNIT*30;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.productInfoWrap {
+  @include flexColumn;
+  @include fullCenter;
+  width: 100%;
+  margin-top: $BASE_UNIT*2;
+}
+
+.author {
+  @include BOLD_HEADING_5;
+  color: $NEUTRAL_BLACK_COLOR;
+}
+
+.title {
+  @include MEDIUM_HEADING_5;
+  color: $NEUTRAL_BLACK_COLOR;
+  margin-top: $BASE_UNIT/2;
+}
+
+.type {
+  @include BOLD_HEADING_7;
+  color: $NEUTRAL_BLACK_COLOR;
+  margin-top: $BASE_UNIT*2;
+  text-transform: uppercase;
+}
+
+.genre {
+  @include BOLD_HEADING_8;
+  color: $NEUTRAL_BLACK_COLOR;
+  margin-top: $BASE_UNIT*2;
+  text-transform: uppercase;
+}
+
+.createdAt {
+  @include MEDIUM_HEADING_8;
+  color: $NEUTRAL_5_COLOR;
+  margin-top: $BASE_UNIT/2;
+}
+
+@media (max-width: $DESKTOP_SIZE_THRESHOLD) {
+  .innerWrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: $XL_TABLET_SIZE_THRESHOLD) {
+  .innerWrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $TABLET_SIZE_THRESHOLD) {
+  .innerWrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
