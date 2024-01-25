@@ -17,3 +17,12 @@
     text-underline-offset: $BASE_UNIT;
   }
 }
+
+@media (max-width: $MOBILE_SIZE_THRESHOLD) {
+  .link {
+    @include MEDIUM_HEADING_5;
+  }
+  .wrap {
+    width: $BASE_UNIT*38;
+  }
+}

@@ -53,6 +53,7 @@ exports.onUploadProduct = functions.storage.object().onFinalize(async (object) =
         }
 
         const fileName = filePath.split('/').pop();
+        const fileFolder = filePath.substring(0, filePath.lastIndexOf("/"));
   
         // Only continue if the file is not a webp
         if (fileName.endsWith('.webp')) {
@@ -82,7 +83,7 @@ exports.onUploadProduct = functions.storage.object().onFinalize(async (object) =
   
         await bucket.file(filePath).delete();
   
-        const fileURL = `https://firebasestorage.googleapis.com/v0/b/${bucket.name}/o/${encodeURIComponent(webpFileName)}`;
+        const fileURL = `https://firebasestorage.googleapis.com/v0/b/${bucket.name}/o/${encodeURIComponent(fileFolder + '/' + webpFileName)}?alt=media`;
   
         const assetsRef = db.collection('AssetsDynamic').doc('albums');
   
@@ -97,13 +98,27 @@ exports.onUploadProduct = functions.storage.object().onFinalize(async (object) =
   
         const localizedStringsEnRef = localizedStringsRef.doc('en');
         await localizedStringsEnRef.set({
-            [product_name]: `${product_name} english name`,
+            [product_name]: {
+                author: 'Author',
+                title: 'Title',
+                type: 'EP/ALBUM/SINGLE',
+                genre: 'Genre',
+                review_author: 'Author of the review',
+                created_at: admin.firestore.FieldValue.serverTimestamp(),
+            },
             [`slug_${product_name}`]: `slug_${product_name}`,
         }, { merge: true });
   
         const localizedStringsLtRef = localizedStringsRef.doc('lt');
         await localizedStringsLtRef.set({
-            [product_name]: `${product_name} lietuviškas pavadinimas`,
+            [product_name]: {
+                author: 'Autorius',
+                title: 'Pavadinimas',
+                type: 'Tipas',
+                genre: 'Žanras',
+                review_author: 'Recenzijos autorius',
+                created_at: admin.firestore.FieldValue.serverTimestamp(),
+            },
             [`slug_${product_name}`]: `slug_${product_name}`,
         }, { merge: true });
 

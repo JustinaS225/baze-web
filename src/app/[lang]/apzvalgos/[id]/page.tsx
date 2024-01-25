@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.scss";
 import { getAssetsReusable } from "@/utils/firebase/getAssetsReusable";
 import { IAssetsCollection } from "@/interfaces/firestore";
-import Reviews from "../components/Reviews";
+
 
 type Props = {
   params: {
@@ -10,14 +10,14 @@ type Props = {
   }
 }
 
-const ReviewsPage = async ({params}: Props) => {
+const ReviewPage = async ({params}: Props) => {
   const data: IAssetsCollection = await getAssetsReusable(params.lang, 'reviews', ['albums']);
 
   return (
     <div className={styles.wrap}>
-      <Reviews data={data}/>
+      DINAMIŠKA JAUNATVIŠKA SUSTAINABLE
     </div>
   );
 }
 
-export default ReviewsPage;
+export default ReviewPage;

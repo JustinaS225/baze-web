@@ -35,7 +35,7 @@ export type IAsset = {
 
 export type IDynamicAssetData = {
   images: IDynamicAssetDataImage[];
-  strings: string[];
+  strings: any;
   slugs: string[];   
 }
 
