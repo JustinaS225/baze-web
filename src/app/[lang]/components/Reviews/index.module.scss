@@ -1,0 +1,12 @@
+@use '../../../../styles/index' as *;
+
+.wrap {
+  @include flexColumn;
+}
+
+.innerWrap {
+  @include flexColumn;
+  @include fullCenter;
+  width: 100%;
+  height: 100%;
+}
