@@ -11,7 +11,7 @@ type Props = {
 const MainContent = ({albumData, pageData}: Props) => {
   return ( 
     <div className={styles.wrap}>
-      <RatingMeter rating={4}/>
+      <RatingMeter rating={9}/>
     </div>
    );
 }
