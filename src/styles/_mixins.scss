@@ -23,247 +23,265 @@
 
 @mixin BOLD_DISPLAY_2 {
   font-size: $BASE_UNIT*5;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*6;
 }
 
 @mixin BOLD_HEADING_1 {
   font-size: $BASE_UNIT*4;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*5;
 }
 
 @mixin BOLD_HEADING_2 {
   font-size: $BASE_UNIT*3.5;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*4;
 }
 
 @mixin BOLD_HEADING_3 {
   font-size: $BASE_UNIT*3;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*4;
 }
 
 @mixin BOLD_HEADING_4 {
   font-size: $BASE_UNIT*2.5;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin BOLD_HEADING_5 {
   font-size: $BASE_UNIT*2.25;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin BOLD_HEADING_6 {
   font-size: $BASE_UNIT*2;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin BOLD_HEADING_7 {
   font-size: $BASE_UNIT*1.75;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin BOLD_HEADING_8 {
   font-size: $BASE_UNIT*1.5;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*2;
 }
 
 @mixin BOLD_HEADING_9 {
   font-size: $BASE_UNIT*1.25;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*1.75;
 }
 
 @mixin BOLD_HEADING_10 {
   font-size: $BASE_UNIT*1.25;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*1.75;
 }
 
 @mixin SEMIBOLD_DISPLAY_2 {
   font-size: $BASE_UNIT*5;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*6;
 }
 
 @mixin SEMIBOLD_HEADING_1 {
   font-size: $BASE_UNIT*4;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*5;
 }
 
 @mixin SEMIBOLD_HEADING_2 {
   font-size: $BASE_UNIT*3.5;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*4;
 }
 
 @mixin SEMIBOLD_HEADING_3 {
   font-size: $BASE_UNIT*3;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*4;
 }
 
 @mixin SEMIBOLD_HEADING_4 {
   font-size: $BASE_UNIT*2.5;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin SEMIBOLD_HEADING_5 {
   font-size: $BASE_UNIT*2.25;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin SEMIBOLD_HEADING_6 {
   font-size: $BASE_UNIT*2;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin SEMIBOLD_HEADING_7 {
   font-size: $BASE_UNIT*1.75;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin SEMIBOLD_HEADING_8 {
   font-size: $BASE_UNIT*1.5;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*2;
 }
 
 @mixin SEMIBOLD_HEADING_9 {
   font-size: $BASE_UNIT*1.25;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*1.75;
 }
 
 
 @mixin SEMIBOLD_HEADING_10 {
   font-size: $BASE_UNIT*1.25;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*1.75;
 }
 
 @mixin MEDIUM_DISPLAY_2 {
   font-size: $BASE_UNIT*5;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*6;
 }
 
 @mixin MEDIUM_HEADING_1 {
   font-size: $BASE_UNIT*4;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*5;
 }
 
 @mixin MEDIUM_HEADING_2 {
   font-size: $BASE_UNIT*3.5;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*4;
 }
 
 @mixin MEDIUM_HEADING_3 {
   font-size: $BASE_UNIT*3;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*4;
 }
 
 @mixin MEDIUM_HEADING_4 {
   font-size: $BASE_UNIT*2.5;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin MEDIUM_HEADING_5 {
   font-size: $BASE_UNIT*2.25;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin MEDIUM_HEADING_6 {
   font-size: $BASE_UNIT*2;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin MEDIUM_HEADING_7 {
   font-size: $BASE_UNIT*1.75;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin MEDIUM_HEADING_8 {
   font-size: $BASE_UNIT*1.5;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*2;
 }
 
 @mixin MEDIUM_HEADING_9 {
   font-size: $BASE_UNIT*1.25;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*1.75;
 }
 
 @mixin MEDIUM_HEADING_10 {
   font-size: $BASE_UNIT*1.25;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $BASE_UNIT*1.75;
 }
 
 @mixin BODY_LARGE {
   font-size: $BASE_UNIT*2.25;
-  font-weight: 400;
+  font-weight: 300;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin BODY_DEFAULT {
   font-size: $BASE_UNIT*2;
-  font-weight: 400;
+  font-weight: 300;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin BODY_MEDIUM {
   font-size: $BASE_UNIT*1.75;
-  font-weight: 400;
+  font-weight: 300;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin BODY_SMALL {
   font-size: $BASE_UNIT*1.5;
-  font-weight: 400;
+  font-weight: 300;
   line-height: $BASE_UNIT*2;
 }
 
 @mixin BODY_XSMALL {
   font-size: $BASE_UNIT*1.25;
-  font-weight: 400;
+  font-weight: 300;
   line-height: $BASE_UNIT*1.75;
 }
 
 @mixin BODY_XXSMALL {
   font-size: $BASE_UNIT;
-  font-weight: 400;
+  font-weight: 300;
   line-height: $BASE_UNIT*1.25;
 }
 
 @mixin BUTTON_SMALL_SEMIBOLD {
   font-size: $BASE_UNIT*1.75;
-  font-weight: 600;
+  font-weight: 700;
   line-height: $BASE_UNIT*3;
 }
 
 @mixin BUTTON_DEFAULT_BOLD {
   font-size: $BASE_UNIT*2;
-  font-weight: 700;
+  font-weight: 900;
   line-height: $BASE_UNIT*3;
+}
+
+@mixin LOGO_TITLE {
+  font-size: $BASE_UNIT*10;
+  font-weight: 900;
+  line-height: $BASE_UNIT*11.5;
+}
+
+@mixin LOGO_TITLE_SMALL {
+  font-size: $BASE_UNIT*8;
+  font-weight: 900;
+  line-height: $BASE_UNIT*9;
+}
+
+@mixin LOGO_TITLE_XSMALL {
+  font-size: $BASE_UNIT*6;
+  font-weight: 900;
+  line-height: $BASE_UNIT*7;
 }
