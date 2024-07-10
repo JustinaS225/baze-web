@@ -1,6 +1,6 @@
 import { firestore, initializeApp } from "firebase-admin";
 import admin from "./admin";
-import { IAsset, IAssetsCollection, IAssetsDynamicSubcollection, IAssetsStaticSubcollection, IDynamicAssetData, IDynamicAssetDataImage } from "@/interfaces/firestore";
+import { IAlbumData, IAsset, IAssetsCollection, IAssetsDynamicSubcollection, IAssetsStaticSubcollection, IDynamicAssetData, IDynamicAssetDataImage } from "@/interfaces/firestore";
 import getFirebaseAdmin from "./admin";
 
 export async function fetchData(pageId: string, locale: any, dynamicAssetTypes: string[]): Promise<IAssetsCollection> {
@@ -95,6 +95,51 @@ export async function fetchData(pageId: string, locale: any, dynamicAssetTypes: 
 
   } catch (error) {
     console.error('Error in fetchData:', error);
+    throw error;
+  }
+}
+
+export async function fetchAlbumData(collectionName: string, docName: string): Promise<IAlbumData> {
+  try {
+    const { firestore } = getFirebaseAdmin();
+    const db = firestore;
+
+    const realDocName = docName.startsWith('slug_') ? docName.substring(5) : docName;
+
+    // Fetching data for a single album document
+    const docRef = db.collection(collectionName).doc(realDocName);
+    const docSnapshot = await docRef.get();
+
+    if (!docSnapshot.exists) {
+      console.error('Album document not found');
+      throw new Error('Album document not found');
+    }
+
+    // Assuming the structure of the album data is consistent with the Firestore structure
+    const data = docSnapshot.data();
+
+    // Constructing the album data object
+    const albumData: IAlbumData = {
+      article_body_lt: data?.article_body_lt || "",
+      article_subtitle_lt: data?.article_subtitle_lt || "",
+      article_title_lt: data?.article_title_lt || "",
+      artist: data?.artist || "",
+      genre: data?.genre || "",
+      image_url: data?.image_url || "",
+      product_description_lt: data?.product_description_lt || "",
+      product_id: data?.product_id || "",
+      product_name: data?.product_name || "",
+      product_title_lt: data?.product_title_lt || "",
+      rating: data?.rating || 0,
+      review_author: data?.review_author || "",
+      review_date: data?.review_date || "",
+      type: data?.type || "",
+    };
+
+    return albumData;
+
+  } catch (error) {
+    console.error('Error in fetchAlbumData:', error);
     throw error;
   }
 }

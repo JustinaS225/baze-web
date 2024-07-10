@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './index.module.scss';
 import TitleLogo from '../common/TitleLogo';
-import { IAssetsCollection } from '@/interfaces/firestore';
+import { IAlbumData, IAssetsCollection } from '@/interfaces/firestore';
 import Navs from '../common/Navs';
+import MainContent from './MainContent';
 
 type Props = {
   data: IAssetsCollection;
+  albumData: IAlbumData;
 }
 
-const Review = ({data}: Props) => {
+const Review = ({data, albumData}: Props) => {
   const commonData = data.static.common;
   const pageData = data.static.pageData;
 
@@ -23,6 +25,7 @@ const Review = ({data}: Props) => {
       <div className={styles.innerWrap}>
         <TitleLogo title={commonData.strings.app_title}/>
         <Navs navs={navs}/>
+        <MainContent albumData={albumData} pageData={pageData}/>
       </div>
     </div>
    );

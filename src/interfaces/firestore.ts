@@ -77,3 +77,20 @@ export type IImageData = {
   title: string;
   slug: string;
 }
+
+export type IAlbumData = {
+  article_body_lt: string[],
+  article_subtitle_lt: string,
+  article_title_lt: string,
+  artist: string,
+  genre: string,
+  image_url: string,
+  product_description_lt: string,
+  product_id: string,
+  product_name: string,
+  product_title_lt: string,
+  rating: number,
+  review_author: string,
+  review_date: string,
+  type: string,
+}
